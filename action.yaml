@@ -1,0 +1,16 @@
+# action.yml
+name: 'Publish Extension'
+description: 'Publish extension with given version'
+inputs:
+  version-to-publish:  # id of input
+    description: 'Semantic Versioning Major/Minor/Patch'
+    required: true
+    default: 'Patch'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.version-to-publish }}
