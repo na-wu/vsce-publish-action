@@ -5,4 +5,4 @@ FROM node:12-slim
 RUN npm install -g vsce
 
 COPY "publish.sh" "/publish.sh"
-ENTRYPOINT ["./publish.sh"]
+ENTRYPOINT ["/publish.sh"]
